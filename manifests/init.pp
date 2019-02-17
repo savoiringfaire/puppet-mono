@@ -22,14 +22,14 @@ class mono (
     location => 'https://download.mono-project.com/repo/ubuntu',
     release  => 'stable-bionic',
     repos    => 'main'
-    requires => [
+    require  => [
       Package[gnupg],
       Package[ca-certificates],
     ]
   }
 
   package { 'mono-complete':
-    requires => [
+    require => [
       Apt::Key[mono],
       Apt::Source[mono],
     ]
