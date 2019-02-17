@@ -14,24 +14,24 @@ class mono (
 
   apt::key { 'mono':
     id     => $gpg_id,
-    server => $gpg_server
+    server => $gpg_server,
   }
 
   apt::source { 'mono':
     comment  => 'Mono Stable Repository',
     location => 'https://download.mono-project.com/repo/ubuntu',
     release  => 'stable-bionic',
-    repos    => 'main'
+    repos    => 'main',
     require  => [
       Package[gnupg],
       Package[ca-certificates],
-    ]
+    ],
   }
 
   package { 'mono-complete':
     require => [
       Apt::Key[mono],
       Apt::Source[mono],
-    ]
+    ],
   }
 }
