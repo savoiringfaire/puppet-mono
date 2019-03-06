@@ -6,7 +6,7 @@
 #   include mono
 class mono (
   String $package_name = 'mono-complete',
-  String $gpg_id = 'FA7E0328081BFF6A14DA29AA6A19B38D3D831EF',
+  String $gpg_id = '3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF',
   String $gpg_server = 'hkp://keyserver.ubuntu.com:80'
 ) {
   package { 'gnupg': }
