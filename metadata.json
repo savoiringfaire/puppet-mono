@@ -1,6 +1,6 @@
 {
   "name": "savoirfaire-mono",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Savoir Faire",
   "summary": "Install and configure mono on Ubuntu 18.04",
   "license": "Apache-2.0",
